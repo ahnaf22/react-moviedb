@@ -1,0 +1,41 @@
+.videocard {
+    color: white;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    transition: transform 200ms ease-out;
+    overflow: hidden;
+}
+
+.videocard:hover {
+    transform: scale(1.09);
+    cursor: pointer;
+}
+
+.videocard>img {
+    object-fit: contain;
+    width: 100%;
+    background-color: rgb(78, 7, 72);
+}
+
+.videocard>h3 {
+    padding-top: 10px;
+}
+
+.movie_stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: translateX(-400px);
+    transition: transform 0.5s ease;
+    margin-top: 10px;
+}
+
+.movie_stats>p {
+    display: flex;
+    align-items: center;
+}
+
+.videocard:hover .movie_stats {
+    transform: translateX(0);
+}

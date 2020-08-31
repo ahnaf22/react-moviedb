@@ -1,0 +1,145 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(ellipse farthest-corner at 60px 45px, rgba(212, 39, 212, 0.8) 0%, rgba(238, 29, 64, 0.178));
+}
+
+/* card styles */
+
+.movie_card {
+  position: relative;
+  display: block;
+  width: 800px;
+  min-height: 350px auto;
+  margin: 150px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+
+.info_section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: multiply;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.movie_header {
+  position: relative;
+  padding: 25px;
+  height: 40%;
+}
+
+.movie_header h1 {
+  color: #fff;
+  font-weight: 400;
+}
+
+.movie_header h4 {
+  color: #fd0ad5;
+  font-weight: 500;
+}
+
+.minutes {
+  display: inline-block;
+  margin-top: 10px;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.type {
+  display: inline-block;
+  color: #cee4fd;
+  margin-left: 10px;
+}
+
+.locandina {
+  position: relative;
+  object-fit: cover;
+  float: left;
+  margin-right: 20px;
+  height: 120px;
+  width: 120px;
+  box-shadow: 0 0 60px -8px rgb(255, 8, 181);
+}
+
+.movie_desc {
+  padding: 25px;
+  height: 10%;
+}
+
+.text {
+  color: #cfd6e1;
+}
+
+.blur_back {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  right: 0;
+  background-size: cover;
+  border-radius: 11px;
+}
+
+@media screen and (min-width: 768px) {
+  .movie_header {
+    width: 60%;
+  }
+  .movie_desc {
+    width: 50%;
+  }
+  .info_section {
+    background: linear-gradient(to right, rgb(68, 5, 52) 50%, transparent 100%);
+  }
+  .blur_back {
+    width: 70%;
+    background-position: -100% 10% !important;
+  }
+  .blur_back>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie_card {
+    width: 95%;
+    margin: 150px auto;
+    min-height: auto;
+    height: auto;
+  }
+  .blur_back {
+    width: 100%;
+    background-position: 50% 50% !important;
+  }
+  .blur_back>img {
+    object-fit: cover;
+    margin-top: -10px;
+    width: 100%;
+    height: 100%;
+  }
+  .movie_header {
+    width: 100%;
+    margin-top: 85px;
+  }
+  .movie_desc {
+    width: 90%;
+  }
+  .info_section {
+    background: linear-gradient(to top, rgb(68, 5, 52) 50%, transparent 100%);
+    display: inline-grid;
+  }
+}
+
+#bright {
+  box-shadow: 0px 0px 120px 28px rgba(255, 0, 200, 0.973);
+}
